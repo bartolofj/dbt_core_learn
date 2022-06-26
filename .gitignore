@@ -2,3 +2,4 @@
 target/
 dbt_packages/
 logs/
+stuff_to_test.txt
