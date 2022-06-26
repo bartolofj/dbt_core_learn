@@ -6,7 +6,6 @@ with payments as (
             status, 
             amount / 100 as amount, 
             created as created_at
-    FROM jaffle_shop.payment
-
+    FROM {{ source('stripe', 'payment') }}
 )
 select * from payments
