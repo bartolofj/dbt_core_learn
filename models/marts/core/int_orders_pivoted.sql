@@ -9,9 +9,12 @@ pivoted as (
         order_id,
         {% for pay_method in payment_methods -%}
         sum(case when payment_method = '{{ pay_method }}' then amount else 0 end) as {{ pay_method }}_amount
-        {%- if not loop.last %}, {% endif %}
-        {% endfor -%}
-
+        {%- if not loop.last -%}
+            , 
+        {%- else -%}
+             
+        {%- endif %}
+        {% endfor -%} 
     from payments
     where status = 'success'
     group by 1
