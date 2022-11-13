@@ -2,7 +2,6 @@
 target/
 dbt_packages/
 logs/
-stuff_to_test.txt
 csv_files/jaffle_shop_customers.csv
 csv_files/jaffle_shop_orders.csv
 csv_files/stripe_payments.csv
